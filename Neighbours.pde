@@ -1,3 +1,4 @@
+//SPECIFIES WHICH ROOMS ADJOIN WHICH
 void specifyNeighbours() {
   
   foyer1.addNeighbour( entrance );
@@ -11,15 +12,13 @@ void specifyNeighbours() {
   foyer1.addNeighbour( foyer2 );
   
   office.addNeighbour( guidance );
-  
   caf.addNeighbour( aud );
-  
   aud.addNeighbour( drama );
   
-  foyer2.addNeighbour( lib );
+  foyer2.addNeighbour( pods2 );
+  foyer2.addNeighbour( library );
   foyer2.addNeighbour( aud );
   foyer2.addNeighbour( sac );
   foyer2.addNeighbour( art );
   foyer2.addNeighbour( staff );
-  foyer2.addNeighbour( pods2 );
 }
