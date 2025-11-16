@@ -28,7 +28,8 @@ void findRing( Room r ) {
       if ( !neighbour.visited && !found ) {
         findRing( neighbour );  //RECURSIVE CALL! Calls the DFS algorithm recursively on the neighbour
 
-        //IF THE ABOVE RECURSIVE SEARCH DIDN'T SUCCEED, THEN GO BACK TO THE PREVIOUS ROOM 
+        //IF THE ABOVE RECURSIVE SEARCH DIDN'T SUCCEED, THEN GO BACK TO THE PREVIOUS ROOM & ADD IT AGAIN TO THE SEARCH PATH
+        //(since the robot has to re-enter this room)
         if ( !found ) {
           println("Going back to the", r.name);
           searchPath.add( r );
@@ -45,3 +46,4 @@ void printSearchPath() {
     println(r.name);
   }
 }
+
